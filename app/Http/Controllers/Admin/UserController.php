@@ -31,6 +31,8 @@ class UserController extends Controller
     {
         $user->roles()->sync($request->roles);
         
-        return $request->all();
+        return redirect()->route('admin.users.index');
+
+        // return $request->all();
     }
 }

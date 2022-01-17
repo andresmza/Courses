@@ -1,8 +1,8 @@
-<x-instructor-layout>
+ <x-instructor-layout :course="$course"> {{-- coloco : delante para indicar que es una variable lo que se manda y no una cadena "$course" --}}
 
-    <x-slot name='course'>
+    {{-- <x-slot name='course'>
         {{$course->slug}}
-    </x-slot>
+    </x-slot> --}}
 
     <h1 class="text-2xl font-bold">INFORMACIÓN DEL CURSO</h1>
     <hr class="mt-2 mb-6">

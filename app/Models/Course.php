@@ -9,7 +9,7 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id', 'status'];
+    protected $guarded = ['id', 'status']; //no permitir asignación masiva para estos atributos
     protected $withCount = ['students', 'reviews'];
 
     public function getRatingAttribute()
@@ -43,7 +43,10 @@ class Course extends Model
         return "slug";
     }
 
-
+    //uno a uno
+    public function observation(){
+        return $this->hasOne(Observation::class);
+    }
 
     //uno a muchos 
     public function reviews()

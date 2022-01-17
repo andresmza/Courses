@@ -22,7 +22,7 @@ class CourseSeeder extends Seeder
      */
     public function run()
     {
-        $courses = Course::factory(200)->create();
+        $courses = Course::factory(1000)->create();
         foreach ($courses as $course) {
             Image::factory(1)->create([
                 'imageable_id' => $course->id,
